@@ -13,7 +13,7 @@ import CoreData
 extension ToDoListItem {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<ToDoListItem> {
-        var request = NSFetchRequest<ToDoListItem>(entityName: "ToDoListItem")
+        let request = NSFetchRequest<ToDoListItem>(entityName: "ToDoListItem")
         let sortDescriptor = NSSortDescriptor(key: "record", ascending: true)
         request.sortDescriptors = [sortDescriptor]
         
