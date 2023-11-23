@@ -20,6 +20,7 @@
 		9E7181602B0F154B00570CCA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E71815D2B0F154A00570CCA /* ContentView.swift */; };
 		9E7181612B0F154B00570CCA /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E71815E2B0F154B00570CCA /* ContentViewModel.swift */; };
 		9E7181622B0F154B00570CCA /* GridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E71815F2B0F154B00570CCA /* GridCell.swift */; };
+		9E7181652B0F245F00570CCA /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7181642B0F245F00570CCA /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		9E71815D2B0F154A00570CCA /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9E71815E2B0F154B00570CCA /* ContentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		9E71815F2B0F154B00570CCA /* GridCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridCell.swift; sourceTree = "<group>"; };
+		9E7181642B0F245F00570CCA /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				9E7181362B0EF4F900570CCA /* AppDelegate.swift */,
 				9E7181382B0EF4F900570CCA /* SceneDelegate.swift */,
 				9E71813A2B0EF4F900570CCA /* CoreDataViewController.swift */,
+				9E7181642B0F245F00570CCA /* CoreDataManager.swift */,
 				9E7181552B0F127600570CCA /* SwiftUIViewController.swift */,
 				9E71813C2B0EF4F900570CCA /* Main.storyboard */,
 				9E7181632B0F155800570CCA /* SwiftUIView */,
@@ -185,6 +188,7 @@
 				9E7181532B0F0AA000570CCA /* ToDoListItem+CoreDataProperties.swift in Sources */,
 				9E7181392B0EF4F900570CCA /* SceneDelegate.swift in Sources */,
 				9E7181622B0F154B00570CCA /* GridCell.swift in Sources */,
+				9E7181652B0F245F00570CCA /* CoreDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
