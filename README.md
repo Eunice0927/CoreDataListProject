@@ -15,3 +15,8 @@
 |시작|실패(case1)|실패(case2)|성공|다시하기|
 |:-:|:-:|:-:|:-:|:-:|
 |<img height="300" src="https://github.com/Eunice0927/GridRowProject/assets/106911494/76a94885-6183-4544-9c9d-6e4fa36d9483">|<img height="300" src="https://github.com/Eunice0927/GridRowProject/assets/106911494/77b828b2-310a-4419-8238-9155b99100a6">|<img height="300" src="https://github.com/Eunice0927/GridRowProject/assets/106911494/4e2dac47-ae22-4519-a8a6-059f5a1b91b7">|<img height="300" src="https://github.com/Eunice0927/GridRowProject/assets/106911494/76674b53-807c-4af2-a440-6ea3865fd92b">|<img height="300" src="https://github.com/Eunice0927/GridRowProject/assets/106911494/3b2238b6-9a18-458a-a326-d0ab19b483a2">|
+
+## 결과 화면
+|결과|
+|:-:|
+|<img height="300" src="https://github.com/Eunice0927/CoreDataListProject/assets/106911494/f732a841-722c-4461-b175-a4d53f0499a7">|
