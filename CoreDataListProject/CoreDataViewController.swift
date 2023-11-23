@@ -46,7 +46,7 @@ class CoreDataViewController: UIViewController, UITableViewDelegate, UITableView
             self?.coreDataManager.deleteItem(item: item)
         }))
         
-//        present(sheet, animated: true)
+        present(sheet, animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

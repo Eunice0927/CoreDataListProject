@@ -18,10 +18,12 @@ class ContentViewModel: ObservableObject {
     var startTime: Date = Date()
     var endTime: Date = Date()
     @Published var playtime: String = ""
+    var record: Double = 0
     
     func setEndTime() {
         endTime = Date()
         playtime = String("\(round(endTime.timeIntervalSince(startTime)*100)/100)초")
+        record = round(endTime.timeIntervalSince(startTime)*100)/100
     }
     
     enum GameEnd {
@@ -42,7 +44,7 @@ class ContentViewModel: ObservableObject {
         case .gameSuccess:
             title = "성공🎉"
             showEndView = true
-            CoreDataManager().createItem(name: playtime)
+            CoreDataManager().createItem(name: playtime, record: record)
         }
     }
 }

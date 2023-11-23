@@ -8,7 +8,8 @@
 import UIKit
 
 class StoryboardTableViewController: UITableViewController {
-
+    let coreDataManager = CoreDataManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,12 +19,18 @@ class StoryboardTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        DispatchQueue.main.async {
+            self.coreDataManager.getAllItems()
+        }
+    }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return coreDataManager.models.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,15 +38,15 @@ class StoryboardTableViewController: UITableViewController {
         return 0
     }
 
-    /*
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let model = coreDataManager.models[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+//        cell.textLabel?.text = "\(model.name) - \(model.createdAt)"
+        cell.textLabel?.text = model.name
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.

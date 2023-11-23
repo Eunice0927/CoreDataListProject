@@ -27,10 +27,11 @@ class CoreDataManager {
         }
     }
     
-    func createItem(name: String) {
+    func createItem(name: String, record: Double) {
         print("Create: \(name)")
         let newItem = ToDoListItem(context: context)
         newItem.name = name
+        newItem.record = record
         newItem.createdAt = Date()
         
         do {
