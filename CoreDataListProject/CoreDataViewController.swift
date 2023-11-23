@@ -19,11 +19,13 @@ class CoreDataViewController: UIViewController, UITableViewDelegate, UITableView
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         title = "Score"
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.frame = view.bounds
+        coreDataManager.tableView = tableView
     }
     
     override func viewWillAppear(_ animated: Bool) {
