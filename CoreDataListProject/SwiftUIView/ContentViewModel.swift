@@ -42,6 +42,7 @@ class ContentViewModel: ObservableObject {
         case .gameSuccess:
             title = "성공🎉"
             showEndView = true
+            CoreDataViewController().createItem(name: playtime)
         }
     }
 }
