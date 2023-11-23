@@ -7,16 +7,39 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // where to perform objects in the coredata db
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    let tableView: UITableView = {
+        let table = UITableView()
+        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+       
+        return table
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        title = "CoreData To Do List"
+        view.addSubview(tableView)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.frame = view.bounds
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = "Hello world"
+        return cell
     }
 
+    
+    // MARK: - CoreData
+    
     // call all items of db
     func getAllItems() {
         do {
