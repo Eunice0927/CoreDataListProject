@@ -47,6 +47,7 @@ class CoreDataManager {
         
         do {
             try context.save()
+            getAllItems()
         } catch let error {
             print(error)
         }

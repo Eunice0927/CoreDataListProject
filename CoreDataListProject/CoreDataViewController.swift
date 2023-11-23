@@ -35,6 +35,20 @@ class CoreDataViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let item = coreDataManager.models[indexPath.row]
+        
+        let sheet = UIAlertController(title: "Delete", message: nil, preferredStyle: .actionSheet)
+        sheet.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        sheet.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { [weak self] _ in
+            self?.coreDataManager.deleteItem(item: item)
+        }))
+        
+//        present(sheet, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return coreDataManager.models.count
     }
