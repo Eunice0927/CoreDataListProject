@@ -6,24 +6,23 @@
 //
 
 import UIKit
+import SwiftUI
 
 class SwiftUIViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let swiftUIController = UIHostingController(rootView: ContentView())
+        swiftUIController.view.translatesAutoresizingMaskIntoConstraints = false
+        
+        addChild(swiftUIController)
+        self.view.addSubview(swiftUIController.view)
+        NSLayoutConstraint.activate([
+            swiftUIController.view.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            swiftUIController.view.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            swiftUIController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            swiftUIController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
