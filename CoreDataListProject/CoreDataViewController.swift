@@ -56,6 +56,7 @@ class CoreDataViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = coreDataManager.models[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+//        cell.textLabel?.text = "\(model.name) - \(model.createdAt)"
         cell.textLabel?.text = model.name
         return cell
     }
