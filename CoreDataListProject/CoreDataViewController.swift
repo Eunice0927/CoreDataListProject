@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CoreDataViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // where to perform objects in the coredata db
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -22,7 +22,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "CoreData To Do List"
+        title = "Score"
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
