@@ -39,7 +39,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LnM-cP-EWh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="894" y="336"/>
+            <point key="canvasLocation" x="1662" y="-321"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="GaA-iC-TdY">
@@ -53,7 +53,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="7Nb-50-n1o"/>
-                        <segue destination="c8f-0n-UHn" kind="relationship" relationship="viewControllers" id="xZY-Ti-uvo"/>
                         <segue destination="qno-zq-9Nb" kind="relationship" relationship="viewControllers" id="fg0-RX-vty"/>
                     </connections>
                 </tabBarController>
@@ -61,7 +60,7 @@
             </objects>
             <point key="canvasLocation" x="112.21374045801527" y="-2.1126760563380285"/>
         </scene>
-        <!--Item-->
+        <!--Record-->
         <scene sceneID="9e0-m2-qdQ">
             <objects>
                 <tableViewController id="qno-zq-9Nb" customClass="StoryboardTableViewController" customModule="CoreDataListProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -70,7 +69,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="storyboardCell" id="2gd-ni-t2Z">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="storyboardCell" id="2gd-ni-t2Z" customClass="StoryboardTableViewCell" customModule="CoreDataListProject" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="393" height="44.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2gd-ni-t2Z" id="XFX-lj-CRT">
@@ -78,8 +77,8 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rank" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPh-wo-ycv">
-                                            <rect key="frame" x="20" y="12.000000000000002" width="38" height="20.666666666666671"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="19.999999999999996" y="9.3333333333333339" width="47.666666666666657" height="26.333333333333329"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -90,14 +89,14 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Record" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAh-3f-GMV">
-                                            <rect key="frame" x="70" y="12.000000000000002" width="55" height="20.666666666666671"/>
+                                            <rect key="frame" x="97.666666666666671" y="10.666666666666666" width="55.000000000000014" height="23.666666666666671"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="QAh-3f-GMV" firstAttribute="leading" secondItem="FPh-wo-ycv" secondAttribute="trailing" constant="12" id="2V2-9K-dvt"/>
+                                        <constraint firstItem="QAh-3f-GMV" firstAttribute="leading" secondItem="FPh-wo-ycv" secondAttribute="trailing" constant="30" id="2V2-9K-dvt"/>
                                         <constraint firstItem="QAh-3f-GMV" firstAttribute="centerY" secondItem="XFX-lj-CRT" secondAttribute="centerY" id="C6l-Re-aby"/>
                                         <constraint firstItem="tyM-WT-JrZ" firstAttribute="trailing" secondItem="XFX-lj-CRT" secondAttribute="trailingMargin" id="JGx-7K-RNr"/>
                                         <constraint firstItem="FPh-wo-ycv" firstAttribute="centerY" secondItem="XFX-lj-CRT" secondAttribute="centerY" id="KjB-az-YHm"/>
@@ -107,6 +106,11 @@
                                         <constraint firstItem="QAh-3f-GMV" firstAttribute="baseline" secondItem="FPh-wo-ycv" secondAttribute="baseline" id="zLf-bD-1NX"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="rank" destination="FPh-wo-ycv" id="lLE-oT-7Rf"/>
+                                    <outlet property="record" destination="QAh-3f-GMV" id="Q32-8l-QfA"/>
+                                    <outlet property="time" destination="tyM-WT-JrZ" id="AGR-DC-w5t"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -114,7 +118,11 @@
                             <outlet property="delegate" destination="qno-zq-9Nb" id="rUP-hQ-aPT"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="IjY-3r-uL7"/>
+                    <tabBarItem key="tabBarItem" title="Record" image="medal" catalog="system" id="IjY-3r-uL7"/>
+                    <connections>
+                        <outlet property="storyboardTableView" destination="YFb-Cq-dOH" id="jod-ja-9Fm"/>
+                        <outlet property="tableView" destination="YFb-Cq-dOH" id="GLy-SY-hXQ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VZJ-AX-rNQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

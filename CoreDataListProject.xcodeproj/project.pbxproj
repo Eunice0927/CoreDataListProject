@@ -22,6 +22,7 @@
 		9E71816B2B0F351A00570CCA /* StoryboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E71816A2B0F351A00570CCA /* StoryboardTableViewController.swift */; };
 		9E7181722B0F3E7300570CCA /* ToDoListItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7181702B0F3E7300570CCA /* ToDoListItem+CoreDataClass.swift */; };
 		9E7181732B0F3E7300570CCA /* ToDoListItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7181712B0F3E7300570CCA /* ToDoListItem+CoreDataProperties.swift */; };
+		9E7181752B0F3F8F00570CCA /* StoryboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7181742B0F3F8F00570CCA /* StoryboardTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		9E71816A2B0F351A00570CCA /* StoryboardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardTableViewController.swift; sourceTree = "<group>"; };
 		9E7181702B0F3E7300570CCA /* ToDoListItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ToDoListItem+CoreDataClass.swift"; path = "../../ToDoListItem+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9E7181712B0F3E7300570CCA /* ToDoListItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ToDoListItem+CoreDataProperties.swift"; path = "../../ToDoListItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9E7181742B0F3F8F00570CCA /* StoryboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				9E7181552B0F127600570CCA /* SwiftUIViewController.swift */,
 				9E71813C2B0EF4F900570CCA /* Main.storyboard */,
 				9E71816A2B0F351A00570CCA /* StoryboardTableViewController.swift */,
+				9E7181742B0F3F8F00570CCA /* StoryboardTableViewCell.swift */,
 				9E7181632B0F155800570CCA /* SwiftUIView */,
 				9E7181422B0EF4FB00570CCA /* Assets.xcassets */,
 				9E7181442B0EF4FB00570CCA /* LaunchScreen.storyboard */,
@@ -184,6 +187,7 @@
 				9E7181412B0EF4F900570CCA /* CoreDataListProject.xcdatamodeld in Sources */,
 				9E7181562B0F127600570CCA /* SwiftUIViewController.swift in Sources */,
 				9E71816B2B0F351A00570CCA /* StoryboardTableViewController.swift in Sources */,
+				9E7181752B0F3F8F00570CCA /* StoryboardTableViewCell.swift in Sources */,
 				9E7181602B0F154B00570CCA /* ContentView.swift in Sources */,
 				9E7181722B0F3E7300570CCA /* ToDoListItem+CoreDataClass.swift in Sources */,
 				9E71813B2B0EF4F900570CCA /* CoreDataViewController.swift in Sources */,
