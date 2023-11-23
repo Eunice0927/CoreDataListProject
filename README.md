@@ -1,5 +1,5 @@
 # CoreDataListProject
-**GridRow와 CoreData 활용 연습을 위한 숫자 카드 클릭 게임을 만들었다.** <br/>
+**CoreData 활용 연습을 위해 [기존에 SwiftUI로 만든 숫자 카드 클릭 게임](https://github.com/Eunice0927/GridRowProject)을 가지고와 게임 성적을 저장하도록 했다.** <br/>
 **게임 결과가 Core Data에 저장되어 TableView로 보여진다.** <br/>
 **두 뷰는 탭바로 연결되었다.**
 
