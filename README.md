@@ -19,4 +19,4 @@
 ## 결과 화면
 |결과|
 |:-:|
-|<img height="300" src="https://github.com/Eunice0927/CoreDataListProject/assets/106911494/f732a841-722c-4461-b175-a4d53f0499a7">|
+|<img height="300" src="https://github.com/Eunice0927/CoreDataListProject/assets/106911494/4ad8dc99-3412-4410-bd02-23c9159330d9">|
