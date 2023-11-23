@@ -17,6 +17,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
        
         return table
     }()
+    
+    private var models = [ToDoListItem]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,12 +30,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return models.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let model = models[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "Hello world"
+        cell.textLabel?.text = model.name
         return cell
     }
 
@@ -43,7 +46,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // call all items of db
     func getAllItems() {
         do {
-            let items = try context.fetch(ToDoListItem.fetchRequest()) //subclass 추가하며 자동생성되었다.
+            models = try context.fetch(ToDoListItem.fetchRequest()) //subclass 추가하며 자동생성되었다.
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         } catch let error {
             //error
             print(error)
